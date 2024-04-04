@@ -1,0 +1,200 @@
+:root {
+    --introductionColor: #FFFFFF;
+    --offerColor: #20B0AD;
+    --buttonColor: #BDD13D;
+    --moreInformationColor: #7CD3CE;
+    --textColor: #A4A6AA;
+    --letter: "Montserrat", sans-serif;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  main {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    height: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
+    grid-template-rows: repeat(auto-fit, minmax(180px, 260px));
+  }
+  
+  .introduction {
+    background-color: var(--introductionColor);
+    padding: 15px;
+    box-shadow: -1px -5px 17px -4px rgba(0, 0, 0, 0.75);
+    margin: 0 10px;
+    border-radius: 6px 6px 0 0;
+    line-height: 2.5rem;
+    z-index: 2;
+  }
+  
+  .introduction h1 {
+    color: var(--offerColor);
+    font-size: 2rem;
+    font-family: var(--letter);
+    font-weight: 600;
+    margin: 5px 0;
+  }
+  
+  .introduction h4 {
+    color: var(--buttonColor);
+    font-size: 1.3rem;
+    font-family: var(--letter);
+    font-weight: 600;
+    margin: 5px 0;
+  }
+  
+  .introduction p {
+    color: var(--textColor);
+    font-size: 1.3rem;
+    font-family: var(--letter);
+    font-weight: 550;
+    margin: 5px 0;
+    padding: 0 30px 0 0;
+  }
+  
+  .offer {
+    background-color: var(--offerColor);
+    padding: 15px;
+    box-shadow: -2px 0px 9px 0px rgba(164, 166, 170, 1);
+    margin: 0 10px;
+    line-height: 2.5rem;
+  }
+  
+  .offer h3 {
+    color: var(--introductionColor);
+    font-size: 2rem;
+    font-family: var(--letter);
+    font-weight: 500;
+    margin: 10px 0;
+  }
+  
+  .offer span {
+    color: var(--introductionColor);
+    font-size: 2rem;
+    font-family: var(--letter);
+    font-weight: 500;
+    margin: 5px 0;
+  }
+  
+  .offer p {
+    color: var(--introductionColor);
+    font-size: 1.3rem;
+    font-family: var(--letter);
+    font-weight: 400;
+    margin: 10px 0;
+  }
+  
+  .offer button {
+    display: block;
+    width: 220px;
+    border: none;
+    margin: 20px auto;
+    border-radius: 5px;
+    height: 40px;
+    background-color: var(--buttonColor);
+    color: var(--introductionColor);
+  }
+  
+  .more-info {
+    background-color: var(--moreInformationColor);
+    padding: 15px;
+    box-shadow: -1px 14px 17px -4px rgba(0, 0, 0, 0.75);
+    margin: 0 10px;
+    border-radius: 0 0 6px 6px;
+    color: var(--introductionColor);
+    line-height: 2.5rem;
+  }
+  
+  .more-info h3 {
+    color: var(--introductionColor);
+    font-size: 2rem;
+    font-family: var(--letter);
+    font-weight: 500;
+    margin: 10px 0;
+  }
+  
+  .more-info p {
+    color: var(--introductionColor);
+    font-size: 1.3rem;
+    font-family: var(--letter);
+    font-weight: 500;
+    margin: 10px 0;
+    padding: 0 30px 0 0;
+  }
+  
+  @media (min-width:900px) {
+    main {
+      margin: 0 20px;
+      grid-template-areas:
+        "intro intro"
+        "offer more";
+    }
+  
+    .introduction {
+      margin: 0 0;
+      grid-area: intro;
+      line-height: 3.5rem;
+    }
+  
+    .introduction h1 {
+      font-size: 3rem;
+    }
+  
+    .introduction h4 {
+      font-size: 2.6rem;
+    }
+  
+    .introduction p {
+      font-size: 2rem;
+    }
+  
+    .offer {
+      margin: 0 0;
+      grid-area: offer;
+      border-radius: 0 0 0 6px;
+      box-shadow: -8px 12px 25px 0px rgba(0, 0, 0, 0.75);
+      line-height: 3rem;
+    }
+  
+    .offer h3 {
+      font-size: 2.8rem;
+    }
+  
+    .offer span {
+      font-size: 2.4rem;
+    }
+  
+    .offer p {
+      font-size: 1.6rem;
+    }
+  
+    .offer button {
+      font-size: 2rem;
+    }
+  
+    .more-info {
+      margin: 0 0;
+      grid-area: more;
+      border-radius: 0 0 6px 0;
+      box-shadow: 2px 9px 13px 0px rgba(0, 0, 0, 0.75);
+      line-height: 3rem;
+    }
+  
+    .more-info h3 {
+      font-size: 2.8rem;
+    }
+  
+    .more-info p {
+      font-size: 1.6rem;
+    }
+  }
